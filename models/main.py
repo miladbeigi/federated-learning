@@ -5,8 +5,6 @@ import json
 import numpy as np
 import os
 import pandas as pd
-# os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-# os.environ['CUDA_VISIBLE_DEVICES'] = "3"
 import random
 import torch
 import torch.nn as nn
@@ -41,7 +39,8 @@ def main():
         alpha = 'alpha_{:.2f}'.format(alpha)
         print("Alpha:", alpha)
 
-    # Setup GPU
+    # Setup GPU or CPU
+    # device = torch.device('cpu')
     device = torch.device(args.device if torch.cuda.is_available else 'cpu')
     print("Using device:", torch.cuda.get_device_name(device) if device != 'cpu' else 'cpu')
 
@@ -319,9 +318,9 @@ def init_wandb(args, alpha=None, run_id=None):
     run = wandb.init(
                 id = id,
                 # Set entity to specify your username or team name
-                entity="federated-learning",
+                entity="milad-be",
                 # Set the project where this run will be logged
-                project='fl_' + args.dataset,
+                project='aml-project-1',
                 group=group_name,
                 # Track hyperparameters and run metadata
                 config=configuration,
