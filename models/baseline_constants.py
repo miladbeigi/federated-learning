@@ -18,7 +18,8 @@ MODEL_PARAMS = {
     'cifar100.cnn': (0.01, 100),
     'cifar10.cnn': (0.01, 10),
     # Number of blocks (list), number of classes
-    'cifar10.resnet20' : (0.01, [3, 3, 3] , 10)
+    'cifar10.resnet20' : (0.01, [3, 3, 3] , 10),
+    'cifar100.resnet20' : (0.01, [3, 3, 3] , 100)
 }
 """dict: Model specific parameter specification"""
 
