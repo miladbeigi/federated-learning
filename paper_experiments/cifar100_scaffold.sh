@@ -2,6 +2,7 @@
 
 python ./data/run.py --dataset cifar100 --root ./data --alpha 0.5
 
+
 python run_scaffold.py --global_epochs 1000 \ 
    --local_epochs 1 \ 
    --local_lr 0.1 \ 
