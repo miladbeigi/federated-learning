@@ -19,8 +19,8 @@ from utils.cutout import Cutout
 from utils.main_utils import *
 from utils.model_utils import read_data
 
-os.environ["WANDB_API_KEY"] = ""
-os.environ["WANDB_MODE"] = "offline"
+# os.environ["WANDB_API_KEY"] = ""
+# os.environ["WANDB_MODE"] = "offline"
 
 def main():
     args = parse_args()
